@@ -1,7 +1,20 @@
+Optimizer: !!python/name:torch.optim.adamw.AdamW ''
+Scheduler: !!python/name:torch.optim.lr_scheduler.StepLR ''
 accumulate_grad_batches: 1
-batch_size: 400
-epochs: 700
-lr: 0.0001
-max_lr: 0.001
-three_phase: false
+batch_size: 80
+center_csp: true
+drift_mag: 0.0001
+epochs: 5000
+lr: 0.01
+noise_mag: 1.0e-05
+optimizer_kwargs:
+  eps: 1.0e-08
+scale_mag: 2.0
+scheduler_kwargs:
+  gamma: 0.5
+  step_size: 100
+shift_mag: 0.2
+swa_epoch_start: 0.8
+swa_lrs: 0.0001
+test_copies: 5
 window_size: 256

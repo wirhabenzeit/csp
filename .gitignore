@@ -1,2 +1,5 @@
 logs/*
-lightning-logs
+lightning_logs/*
+lightning-checkpoints
+*.ckpt
+.DS_Store

@@ -1,7 +1,16 @@
+Optimizer: !!python/name:torch.optim.adam.Adam ''
 accumulate_grad_batches: 1
-batch_size: 128
-epochs: 100
-lr: 0.0001
-max_lr: 0.01
-three_phase: false
-window_size: 256
+batch_size: 200
+center_csp: true
+drift_mag: 0.0
+epochs: 3000
+lr: 0.01
+noise_mag: 0.1
+optimizer_kwargs:
+  eps: 1.0e-08
+scale_mag: 3.0
+shift_mag: 0.2
+swa_epoch_start: 0.8
+swa_lrs: 0.0001
+test_copies: 5
+window_size: 512
